@@ -1,0 +1,6 @@
+#ignore debug path
+/build-testGIS-Desktop_Qt_5_4_2_MinGW_32bit-Debug
+/build-testGIS-Desktop_Qt_5_4_2_MinGW_32bit-Release
+#ignore /BattleSea/*.user, *.autosave
+/testGIS/*.user
+/testGIS/*.autosave
