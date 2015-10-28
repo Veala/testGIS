@@ -67,10 +67,34 @@ int Brains::checkM()
 
 void Brains::printWords()
 {
-    ifstream file;
+    fstream file;
     file.open(argv[2], ios_base::in);
-    //file.EOF()
-    //EOF
+    int len = strlen(argv[6]);
+    file.seekg(0, file.end);
+    int max = file.tellg();
+    file.close();
+    file.open(argv[2], ios_base::in);
+    cout << max << '\n';
+    int n = 0;
+    char *c;
+    int pos = 0;   file.seekg(pos, file.beg);
+    //file.read(c,len); pos++;   file.seekg(pos);cout << c << '\n';
+    //file.read(c,len); pos++; file.seekg(pos);cout << c << '\n';
+    //while (!file.eof()) {
+    cout << "Ok" << '\n';
+    while (1) {
+        cout << "Ok" << '\n';
+        file.read(c,len);
+        cout << "Ok" << '\n';
+        cout << c << '\n';
+        cout << pos << '\n';
+        if (!strcmp(argv[6], c)) n++;
+        //if (!file.eof())
+        if (file.tellg()==max) break;
+        file.seekg(pos++);
+
+    }
+    cout << n;
 
     file.close();
 }
